@@ -1,0 +1,46 @@
+package principal;
+
+import java.util.LinkedList;
+
+public class Biblioteca {
+/**
+ *  DEFINIMOS Y CREAMOS LISTA DE LIBROS DISPONIBLES
+ *  COMPLEJIDAD 0(1) 
+ */
+    public LinkedList<Libro> librosDisponibles = new LinkedList<>();
+/**
+ *  METODOD PARA RESGISTRAR UN LIBRO EN LA BIBLIOTECA  
+ *  COMPLEJIDAD 0(1) CONSTANTE
+ * @param libro 
+ */
+    public void registrarLibro(Libro libro) {
+        this.librosDisponibles.add(libro);
+    }
+    /**
+     * 
+     *  METODO PARA BUSCAR LIBRO, RECORRIENDO LISTA DE LIBROS DISPONIBLES
+     *  COMPARANADO EL TITULO CON EL TITLO RECORRIDO  
+     * @param titulo
+     * @return
+     * COMPLEJIDAD 0(n) LINEAL
+     */
+    public Libro buscarLibro(String titulo) {
+        Libro noEncontrado = null;
+        for (int i = 0; i < this.librosDisponibles.size(); i++) {
+            Libro libroRecorrido = this.librosDisponibles.get(i);
+            if (libroRecorrido.getTitulo().equals(titulo)) {
+                return libroRecorrido;
+            }
+        }
+        return noEncontrado;
+    }
+    /**
+     * METODO PARA MOSTRAR LIBROS DISPONIBLES DE LA LISTA QUE YA ESTAN 
+     * PREVIAMENTE RESGISTRADOS
+     * 
+     * @return 
+     */
+    public LinkedList<Libro> mostrarLibrosDisponibles() {
+        return this.librosDisponibles;
+    }
+}
