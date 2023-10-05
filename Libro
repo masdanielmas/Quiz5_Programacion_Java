@@ -1,0 +1,87 @@
+package principal;
+ /**
+  * SE DEFINE LAS VARIABLES DE TIPO PRIVADO TITULO, AUTOR, NUEMRO DE PAGINAS
+  * PARA QUE NO PUEDAN SER MODIFICADAS DESDE OTRAS CLASES
+  * 
+  * @author elseb
+  * COMPLEJIDAD 0(1) CONSTANTE
+  */
+public class Libro {
+    private String titulo;
+    private String autor;
+    private int numeroPaginas;
+     /**
+      * 
+      * CREAMOS EL OBJETO LIBRO CON LOS ATRIBUTOS DE TITULO AUTOR 
+      *  Y NUMERO DE PAGINAS  
+      * 
+      * @param titulo
+      * @param autor
+      * @param numeroPaginas
+      * COMPLEJIDAD 0(1) CONSTANTE
+      */
+    public Libro(String titulo, String autor, int numeroPaginas) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.numeroPaginas = numeroPaginas;
+    }
+    /**
+     * 
+     * METODO SET PARA ESTABLECER UN TITULO
+     * 
+     * @param titulo 
+     * COMPLEJIDAD 0(1) CONSTANTE
+     */
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+    /**
+     * 
+     * 
+     *  METODO SET PARA ESTABLECER UN AUTOR
+     * COMPLEJIDAD 0(1) CONSTANTE
+     * @param autor 
+     */
+    
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+    /**
+     * 
+     * METODOD SET PARA ESTABLECER EL NUMERO DE PAGINAS
+     * COMPLEJIDAD 0(1)CONSTANTE
+     * @param numeroPaginas 
+     */
+    public void setNumeroPaginas(int numeroPaginas) {
+        this.numeroPaginas = numeroPaginas;
+    }
+    /**
+     * 
+     * METODOD GET PARA OBTENER EL TITULO DEL LIBRO
+     * COMPLEJIDAD 0(1)CONSTANTE
+     * 
+     * @return 
+     */
+    public String getTitulo() {
+        return titulo;
+    }
+    /**
+     * 
+     * METODOD GET PARA OBTENER EL NOMBRE DEL AUTOR 
+     * COMPLEJIDAD 0(1)CONSTANTE
+     * 
+     * @return 
+     */
+    public String getAutor() {
+        return autor;
+    }
+    /**
+     * 
+     * METODOD GET PARA OBTENER EL NUMERO DE PAGINAS
+     * COMPLEJIDAD 0(1)CONSTANTE
+     * @return 
+     */
+    public int getNumeroPaginas() {
+        return numeroPaginas;
+    }   
+}
